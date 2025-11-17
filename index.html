@@ -5,34 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO AUTHORITY BOOST -->
-    <title>CORNELIUS AURELIUS GPT's – Official Advanced Intelligence Suite</title>
-    <meta name="description" content="Explore the Official CORNELIUS AURELIUS GPT Suite: OmniScale ASI Prime Edition 2026, OmniCapital Connect, Why Do I Pick The Wrong Men AI, and PROOF IS KING. Built for precision, speed, and elite personal transformation." />
+    <title>CORNELIUS AURELIUS GPT SUITE — Elite Intelligence Systems</title>
+    <meta name="description" content="The Official CORNELIUS AURELIUS GPT Suite: OmniScale ASI Prime Edition, OmniCapital Connect, Why Do I Pick The Wrong Men AI, and PROOF IS KING. Ultra-elite neon AI interface." />
     <meta name="author" content="Cornelius Aurelius" />
-    <meta name="keywords" content="Cornelius Aurelius, Cornelius AI, OmniScale ASI Prime Edition, OmniCapital Connect, Proof Is King, AI Landing Page, Advanced GPTs" />
+    <meta name="keywords" content="Cornelius Aurelius, ASI, OmniScale, OmniCapital, Proof Is King, AI Suite, GPT Collection" />
 
-    <!-- PEACE LICENSE LINK -->
+    <!-- LICENSE -->
     <link rel="license" href="https://zenodo.org/records/17362534" />
 
-    <!-- FAVICON (optional black/neon-blue glow) -->
-    <link rel="icon" href="https://chatgpt.com/favicon.ico" />
-
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
 
-    <!-- STYLE -->
     <style>
         :root {
-            --bg: #000000;
+            --bg: #000;
             --neon: #12b4ff;
-            --neon-soft: #0e8ec7;
-            --text: #e5e5e5;
+            --neon-soft: #0b9bd9;
+            --text: #e6f7ff;
+            --glass: rgba(255,255,255,0.06);
+            --border-glow: 0 0 20px rgba(18,180,255,0.45);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin:0; padding:0; box-sizing:border-box; }
 
         body {
             background: var(--bg);
@@ -41,151 +35,190 @@
             overflow-x: hidden;
         }
 
+        /* HERO */
         header {
-            padding: 40px 20px;
+            padding: 70px 20px 50px;
             text-align: center;
-            background: radial-gradient(circle at top, rgba(18,180,255,0.15), transparent);
+            background: radial-gradient(circle at top, rgba(18,180,255,0.2), transparent);
+            animation: glowPulse 6s infinite alternate;
+        }
+
+        @keyframes glowPulse {
+            from { text-shadow: 0 0 18px var(--neon); }
+            to { text-shadow: 0 0 40px var(--neon-soft); }
         }
 
         header h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8rem;
+            font-family: 'Orbitron';
+            font-size: 3rem;
             color: var(--neon);
-            text-shadow: 0 0 20px var(--neon);
+            text-shadow: 0 0 25px var(--neon);
+            letter-spacing: 2px;
         }
 
         header p {
-            max-width: 600px;
-            margin: 15px auto 0;
+            max-width: 720px;
+            margin: 20px auto 0;
+            opacity: 0.85;
             line-height: 1.6;
-            opacity: 0.8;
         }
 
+        /* GRID */
         .gpt-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-            gap: 35px;
+            max-width: 1500px;
             margin: 60px auto;
             padding: 20px;
-            max-width: 1480px;
+            display: grid;
+            gap: 45px;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
         }
 
+        /* CARD BASE */
         .gpt-card {
-            padding: 25px;
-            border: 1px solid rgba(18,180,255,0.25);
-            border-radius: 14px;
-            background: rgba(255,255,255,0.02);
-            transition: 0.3s ease;
-            backdrop-filter: blur(6px);
-            box-shadow: 0 0 18px rgba(18,180,255,0.08);
+            background: var(--glass);
+            border: 1px solid rgba(18,180,255,0.28);
+            border-radius: 18px;
+            padding: 0 0 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: inset 0 0 18px rgba(18,180,255,0.15),
+                        0 0 28px rgba(18,180,255,0.18);
+            overflow: hidden;
+
+            transition: transform .4s ease, box-shadow .4s ease, border-color .3s ease;
+            transform-style: preserve-3d;
         }
 
+        /* 3D HOVER */
         .gpt-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 0 35px rgba(18,180,255,0.35);
+            transform: translateY(-12px) scale(1.03);
             border-color: var(--neon);
+            box-shadow: 0 0 35px rgba(18,180,255,0.45);
         }
 
-        .gpt-card h2 {
-            font-family: 'Orbitron', sans-serif;
+        /* CARD IMAGE */
+        .gpt-card img {
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid rgba(18,180,255,0.25);
+            filter: brightness(0.94);
+        }
+
+        /* CARD CONTENT */
+        .gpt-content {
+            padding: 22px;
+        }
+
+        .gpt-content h2 {
+            font-family: 'Orbitron';
+            color: var(--neon);
+            text-shadow: 0 0 14px var(--neon-soft);
             font-size: 1.4rem;
             margin-bottom: 12px;
-            color: var(--neon);
-            text-shadow: 0 0 12px var(--neon-soft);
         }
 
-        .gpt-card p {
+        .gpt-content p {
+            opacity: 0.85;
             font-size: 0.95rem;
-            line-height: 1.5;
-            opacity: 0.8;
+            line-height: 1.55;
         }
 
+        /* BUTTON */
         .btn {
-            display: inline-block;
             margin-top: 18px;
-            padding: 12px 20px;
-            font-family: 'Orbitron', sans-serif;
+            display: inline-block;
+            padding: 12px 22px;
+            font-family: 'Orbitron';
             font-size: 0.9rem;
-            color: var(--neon);
-            border: 1px solid var(--neon);
+
             border-radius: 8px;
-            transition: 0.25s;
+            border: 1px solid var(--neon);
+            color: var(--neon);
             text-decoration: none;
+
+            transition: .25s;
         }
 
         .btn:hover {
             background: var(--neon);
             color: #000;
             text-shadow: none;
+            box-shadow: 0 0 20px var(--neon);
         }
 
+        /* FOOTER */
         footer {
-            margin-top: 80px;
-            padding: 40px 10px;
+            margin-top: 90px;
             text-align: center;
+            padding: 40px 10px;
+            border-top: 1px solid rgba(18,180,255,0.25);
             font-size: 0.9rem;
-            opacity: 0.65;
-            color: var(--text);
-            border-top: 1px solid rgba(18,180,255,0.2);
+            opacity: 0.7;
         }
 
         footer span {
-            color: var(--neon);
-            text-shadow: 0 0 8px var(--neon);
             font-family: 'Orbitron';
+            color: var(--neon);
+            text-shadow: 0 0 10px var(--neon);
         }
     </style>
 </head>
 
 <body>
 
-    <!-- HERO SECTION -->
-    <header>
-        <h1>CORNELIUS AURELIUS GPT SUITE</h1>
-        <p>
-            The Official Home of the Elite AI Systems engineered by <strong>Cornelius Aurelius</strong>.  
-            Precision-built. Ultra-optimized. High-performance intelligence for finance, relationships, analysis, and cognitive mastery.
-        </p>
-    </header>
+<header>
+    <h1>CORNELIUS AURELIUS GPT SUITE</h1>
+    <p>The elite intelligence ecosystem engineered by <strong>Cornelius Aurelius</strong>.  
+    High-dimensional reasoning. Neon-class clarity. ASI-level acceleration.</p>
+</header>
 
-    <!-- GPT GRID -->
-    <section class="gpt-grid">
+<section class="gpt-grid">
 
-        <!-- OmniScale ASI Prime Edition -->
-        <div class="gpt-card">
+    <!-- OmniScale -->
+    <div class="gpt-card">
+        <img src="OmniScale ASI PRIME EDITION.png" alt="OmniScale ASI Prime Edition">
+        <div class="gpt-content">
             <h2>OmniScale ASI Prime Edition 2026</h2>
-            <p>Ultra-advanced ASI-grade cognitive model built for extreme synthesis, high-dimensional reasoning, and elite strategic mastery.</p>
+            <p>The AI Business Architect that audits, scales, and funds companies at 138× speed.</p>
             <a class="btn" href="https://chatgpt.com/g/g-69053ce947ec8191b9ad1abc3fca8f8a-omniscale-asi-prime-edition-2026" target="_blank">Open</a>
         </div>
+    </div>
 
-        <!-- OmniCapital Connect -->
-        <div class="gpt-card">
+    <!-- OmniCapital -->
+    <div class="gpt-card">
+        <img src="OmniCapital Connect GPT.png" alt="OmniCapital Connect">
+        <div class="gpt-content">
             <h2>OmniCapital Connect</h2>
-            <p>The intelligence engine for wealth-building, capital flow understanding, financial clarity, and elite economic insight.</p>
+            <p>The financial intelligence engine built for clarity, capital mastery, and precision forecasting.</p>
             <a class="btn" href="https://chatgpt.com/g/g-69080718b09c81918c4f623cda6ec5c5-omnicapital-connect" target="_blank">Open</a>
         </div>
+    </div>
 
-        <!-- Why Do I Pick The Wrong Men? -->
-        <div class="gpt-card">
+    <!-- Wrong Men -->
+    <div class="gpt-card">
+        <img src="WHY DO I PICK THE WRONG MEN.png" alt="Why Do I Pick The Wrong Men?">
+        <div class="gpt-content">
             <h2>Why Do I Pick The Wrong Men AI</h2>
-            <p>Break toxic patterns. Understand hidden behavior loops. Rebuild identity, standards, and relationship intelligence.</p>
+            <p>Break toxic attraction cycles. Rebuild identity. Upgrade relational intelligence.</p>
             <a class="btn" href="https://chatgpt.com/g/g-69168445cb848191ab0e004405e56aa0-why-do-i-pick-the-wrong-men-ai" target="_blank">Open</a>
         </div>
+    </div>
 
-        <!-- Proof Is King -->
-        <div class="gpt-card">
+    <!-- Proof is King -->
+    <div class="gpt-card">
+        <img src="PROOF IS KING.png" alt="Proof Is King">
+        <div class="gpt-content">
             <h2>PROOF IS KING — Money Proof Engine</h2>
-            <p>Extract truth, validate claims, eliminate noise. Built for clarity, evidence, and high-trust financial decisioning.</p>
+            <p>The ultimate system for extracting truth, validating claims, and maximizing high-trust decisions.</p>
             <a class="btn" href="https://chatgpt.com/g/g-69169ca457ec8191a691243f6d1d28db-proof-is-king-money-proof-engine" target="_blank">Open</a>
         </div>
+    </div>
 
-    </section>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        © <span>CORNELIUS AURELIUS</span> — All Rights Reserved<br>
-        Licensed under Peace License: <a style="color:var(--neon);" href="https://zenodo.org/records/17362534" target="_blank">Zenodo Record 17362534</a>
-    </footer>
+<footer>
+    © <span>CORNELIUS AURELIUS</span> — All Rights Reserved<br>
+    Peace License: <a style="color:var(--neon)" href="https://zenodo.org/records/17362534" target="_blank">Zenodo Record 17362534</a>
+</footer>
 
 </body>
 </html>
