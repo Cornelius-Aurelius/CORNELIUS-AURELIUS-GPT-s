@@ -4,211 +4,218 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO AUTHORITY BOOST -->
-    <title>CORNELIUS AURELIUS GPT SUITE — Elite Intelligence Systems</title>
-    <meta name="description" content="The Official CORNELIUS AURELIUS GPT Suite: OmniScale ASI Prime Edition, OmniCapital Connect, Why Do I Pick The Wrong Men AI, and PROOF IS KING. Ultra-elite neon AI interface." />
+    <!-- SEO AUTHORITY -->
+    <title>CORNELIUS AURELIUS · GOD-MODE GPT SUITE</title>
+    <meta name="description" content="The Official CORNELIUS AURELIUS AI Suite: OmniScale ASI Prime Edition, OmniCapital Connect, Proof Is King, Why Do I Pick The Wrong Men AI. A neon-cosmic, ultra-premium ASI interface." />
     <meta name="author" content="Cornelius Aurelius" />
-    <meta name="keywords" content="Cornelius Aurelius, ASI, OmniScale, OmniCapital, Proof Is King, AI Suite, GPT Collection" />
+    <meta name="keywords" content="Cornelius Aurelius, AI Suite, OmniScale ASI, OmniCapital, Proof Is King, Advanced GPTs, Elite AI" />
 
     <!-- LICENSE -->
     <link rel="license" href="https://zenodo.org/records/17362534" />
 
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --bg: #000;
             --neon: #12b4ff;
-            --neon-soft: #0b9bd9;
-            --text: #e6f7ff;
-            --glass: rgba(255,255,255,0.06);
-            --border-glow: 0 0 20px rgba(18,180,255,0.45);
+            --neon2: #00eaff;
+            --glass: rgba(255,255,255,0.08);
+            --text: #eaffff;
         }
 
         * { margin:0; padding:0; box-sizing:border-box; }
 
         body {
             background: var(--bg);
-            color: var(--text);
             font-family: 'Inter', sans-serif;
+            color: var(--text);
             overflow-x: hidden;
         }
 
-        /* HERO */
-        header {
-            padding: 70px 20px 50px;
-            text-align: center;
-            background: radial-gradient(circle at top, rgba(18,180,255,0.2), transparent);
-            animation: glowPulse 6s infinite alternate;
+        /* Cosmic Gradient Background */
+        body::before {
+            content:"";
+            position: fixed;
+            top:0; left:0;
+            width:100vw; height:100vh;
+            background: radial-gradient(circle at center,
+                rgba(0,180,255,0.15),
+                rgba(0,0,0,1)
+            );
+            z-index:-3;
         }
 
-        @keyframes glowPulse {
-            from { text-shadow: 0 0 18px var(--neon); }
-            to { text-shadow: 0 0 40px var(--neon-soft); }
+        /* Particle Field */
+        canvas#particles {
+            position: fixed;
+            top:0; left:0;
+            width:100%;
+            height:100%;
+            z-index:-1;
+            pointer-events:none;
+        }
+
+        header {
+            text-align:center;
+            padding:85px 20px 40px;
+            animation: glow 6s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow:0 0 15px var(--neon); }
+            to { text-shadow:0 0 40px var(--neon2); }
         }
 
         header h1 {
-            font-family: 'Orbitron';
-            font-size: 3rem;
-            color: var(--neon);
-            text-shadow: 0 0 25px var(--neon);
-            letter-spacing: 2px;
+            font-family:'Orbitron';
+            font-size:3.2rem;
+            color:var(--neon);
+            margin-bottom:20px;
         }
 
         header p {
-            max-width: 720px;
-            margin: 20px auto 0;
-            opacity: 0.85;
-            line-height: 1.6;
+            max-width:700px;
+            margin:auto;
+            line-height:1.6;
+            opacity:0.85;
         }
 
         /* GRID */
         .gpt-grid {
-            max-width: 1500px;
-            margin: 60px auto;
-            padding: 20px;
-            display: grid;
-            gap: 45px;
-            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            max-width:1500px;
+            margin:60px auto;
+            padding:20px;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+            gap:55px;
         }
 
-        /* CARD BASE */
+        /* CARD */
         .gpt-card {
-            background: var(--glass);
-            border: 1px solid rgba(18,180,255,0.28);
-            border-radius: 18px;
-            padding: 0 0 25px;
-            backdrop-filter: blur(10px);
-            box-shadow: inset 0 0 18px rgba(18,180,255,0.15),
-                        0 0 28px rgba(18,180,255,0.18);
-            overflow: hidden;
-
-            transition: transform .4s ease, box-shadow .4s ease, border-color .3s ease;
-            transform-style: preserve-3d;
+            background:var(--glass);
+            backdrop-filter: blur(14px);
+            border:1px solid rgba(0,255,255,0.25);
+            border-radius:20px;
+            overflow:hidden;
+            cursor:pointer;
+            transform-style:preserve-3d;
+            transition:.4s ease;
+            box-shadow:0 0 25px rgba(0,255,255,0.15);
         }
 
-        /* 3D HOVER */
+        /* 3D Tilt */
         .gpt-card:hover {
-            transform: translateY(-12px) scale(1.03);
-            border-color: var(--neon);
-            box-shadow: 0 0 35px rgba(18,180,255,0.45);
+            transform:translateY(-15px) scale(1.05) rotateX(4deg);
+            box-shadow:0 0 40px rgba(18,180,255,0.45);
+            border-color:var(--neon);
         }
 
-        /* CARD IMAGE */
         .gpt-card img {
-            width: 100%;
-            display: block;
-            border-bottom: 1px solid rgba(18,180,255,0.25);
-            filter: brightness(0.94);
+            width:100%;
+            display:block;
+            border-bottom:1px solid rgba(0,255,255,0.2);
         }
 
-        /* CARD CONTENT */
         .gpt-content {
-            padding: 22px;
+            padding:24px;
         }
 
         .gpt-content h2 {
-            font-family: 'Orbitron';
-            color: var(--neon);
-            text-shadow: 0 0 14px var(--neon-soft);
-            font-size: 1.4rem;
-            margin-bottom: 12px;
+            font-family:'Orbitron';
+            color:var(--neon2);
+            font-size:1.4rem;
+            margin-bottom:10px;
+            text-shadow:0 0 12px var(--neon);
         }
 
         .gpt-content p {
-            opacity: 0.85;
-            font-size: 0.95rem;
-            line-height: 1.55;
+            opacity:0.85;
+            line-height:1.55;
         }
 
-        /* BUTTON */
+        /* Button */
         .btn {
-            margin-top: 18px;
-            display: inline-block;
-            padding: 12px 22px;
-            font-family: 'Orbitron';
-            font-size: 0.9rem;
-
-            border-radius: 8px;
-            border: 1px solid var(--neon);
-            color: var(--neon);
-            text-decoration: none;
-
-            transition: .25s;
+            display:inline-block;
+            margin-top:18px;
+            padding:12px 22px;
+            border:1px solid var(--neon);
+            border-radius:10px;
+            color:var(--neon);
+            text-decoration:none;
+            font-family:'Orbitron';
+            transition:.25s;
         }
 
         .btn:hover {
-            background: var(--neon);
-            color: #000;
-            text-shadow: none;
-            box-shadow: 0 0 20px var(--neon);
+            background:var(--neon);
+            color:#000;
+            box-shadow:0 0 25px var(--neon);
         }
 
-        /* FOOTER */
         footer {
-            margin-top: 90px;
-            text-align: center;
-            padding: 40px 10px;
-            border-top: 1px solid rgba(18,180,255,0.25);
-            font-size: 0.9rem;
-            opacity: 0.7;
+            text-align:center;
+            padding:45px 10px;
+            margin-top:80px;
+            border-top:1px solid rgba(0,255,255,0.2);
+            font-size:0.9rem;
+            opacity:0.7;
         }
 
         footer span {
-            font-family: 'Orbitron';
-            color: var(--neon);
-            text-shadow: 0 0 10px var(--neon);
+            font-family:'Orbitron';
+            color:var(--neon2);
+            text-shadow:0 0 10px var(--neon);
         }
     </style>
 </head>
 
 <body>
 
+<canvas id="particles"></canvas>
+
 <header>
     <h1>CORNELIUS AURELIUS GPT SUITE</h1>
-    <p>The elite intelligence ecosystem engineered by <strong>Cornelius Aurelius</strong>.  
-    High-dimensional reasoning. Neon-class clarity. ASI-level acceleration.</p>
+    <p>The Official ASI-Class Intelligence Network.  
+       Precision. Power. Neon-Cosmic Cognition.  
+       Engineered by <strong>Cornelius Aurelius</strong>.</p>
 </header>
 
 <section class="gpt-grid">
 
-    <!-- OmniScale -->
     <div class="gpt-card">
-        <img src="OmniScale ASI PRIME EDITION.png" alt="OmniScale ASI Prime Edition">
+        <img src="OmniScale ASI PRIME EDITION.png" alt="OmniScale">
         <div class="gpt-content">
-            <h2>OmniScale ASI Prime Edition 2026</h2>
-            <p>The AI Business Architect that audits, scales, and funds companies at 138× speed.</p>
+            <h2>OmniScale ASI Prime Edition</h2>
+            <p>The 138× scaling architect. Diagnose. Fund. Expand. Dominate.</p>
             <a class="btn" href="https://chatgpt.com/g/g-69053ce947ec8191b9ad1abc3fca8f8a-omniscale-asi-prime-edition-2026" target="_blank">Open</a>
         </div>
     </div>
 
-    <!-- OmniCapital -->
     <div class="gpt-card">
-        <img src="OmniCapital Connect GPT.png" alt="OmniCapital Connect">
+        <img src="OmniCapital Connect GPT.png" alt="OmniCapital">
         <div class="gpt-content">
             <h2>OmniCapital Connect</h2>
-            <p>The financial intelligence engine built for clarity, capital mastery, and precision forecasting.</p>
+            <p>The mind of money. Capital flow intelligence and strategic clarity.</p>
             <a class="btn" href="https://chatgpt.com/g/g-69080718b09c81918c4f623cda6ec5c5-omnicapital-connect" target="_blank">Open</a>
         </div>
     </div>
 
-    <!-- Wrong Men -->
     <div class="gpt-card">
-        <img src="WHY DO I PICK THE WRONG MEN.png" alt="Why Do I Pick The Wrong Men?">
+        <img src="WHY DO I PICK THE WRONG MEN.png" alt="Wrong Men">
         <div class="gpt-content">
-            <h2>Why Do I Pick The Wrong Men AI</h2>
-            <p>Break toxic attraction cycles. Rebuild identity. Upgrade relational intelligence.</p>
+            <h2>Why Do I Pick The Wrong Men?</h2>
+            <p>Break attraction loops. Identity rebuild. Psychological precision.</p>
             <a class="btn" href="https://chatgpt.com/g/g-69168445cb848191ab0e004405e56aa0-why-do-i-pick-the-wrong-men-ai" target="_blank">Open</a>
         </div>
     </div>
 
-    <!-- Proof is King -->
     <div class="gpt-card">
         <img src="PROOF IS KING.png" alt="Proof Is King">
         <div class="gpt-content">
-            <h2>PROOF IS KING — Money Proof Engine</h2>
-            <p>The ultimate system for extracting truth, validating claims, and maximizing high-trust decisions.</p>
+            <h2>PROOF IS KING</h2>
+            <p>Truth extraction. Signal over noise. Evidence-powered decisions.</p>
             <a class="btn" href="https://chatgpt.com/g/g-69169ca457ec8191a691243f6d1d28db-proof-is-king-money-proof-engine" target="_blank">Open</a>
         </div>
     </div>
@@ -216,9 +223,46 @@
 </section>
 
 <footer>
-    © <span>CORNELIUS AURELIUS</span> — All Rights Reserved<br>
-    Peace License: <a style="color:var(--neon)" href="https://zenodo.org/records/17362534" target="_blank">Zenodo Record 17362534</a>
+    © <span>CORNELIUS AURELIUS</span> — All Rights Reserved  
+    <br>Peace License: 
+    <a style="color:var(--neon2)" href="https://zenodo.org/records/17362534" target="_blank">
+        Zenodo 17362534
+    </a>
 </footer>
+
+<!-- PARTICLE SCRIPT -->
+<script>
+const c = document.getElementById("particles");
+const ctx = c.getContext("2d");
+let w, h, particles;
+
+function init() {
+    w = c.width = window.innerWidth;
+    h = c.height = window.innerHeight;
+    particles = Array.from({length: 90}).map(() => ({
+        x: Math.random()*w,
+        y: Math.random()*h,
+        r: Math.random()*2+1,
+        dx: (Math.random()-.5)*0.4,
+        dy: (Math.random()-.5)*0.4
+    }));
+}
+function animate() {
+    ctx.clearRect(0,0,w,h);
+    particles.forEach(p=>{
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,2*Math.PI);
+        ctx.fillStyle="rgba(0,200,255,0.7)";
+        ctx.fill();
+        p.x+=p.dx; p.y+=p.dy;
+        if(p.x<0||p.x>w) p.dx*=-1;
+        if(p.y<0||p.y>h) p.dy*=-1;
+    });
+    requestAnimationFrame(animate);
+}
+window.onresize=init;
+init(); animate();
+</script>
 
 </body>
 </html>
